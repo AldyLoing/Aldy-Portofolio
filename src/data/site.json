@@ -1,0 +1,57 @@
+{
+  "name": "Aldy Oscar Pancasila Loing",
+  "title": "Cloud & ML Enthusiast — Software Engineer",
+  "summary": "Saya adalah seorang pengembang perangkat lunak dengan minat pada cloud, ML, dan infrastruktur. Informasi lengkap berasal dari CV.",
+  "contact": {
+    "email": "redacted@example.com",
+    "location": "Manado, Indonesia"
+  },
+  "skills": {
+    "frontend": ["React", "Next.js", "Tailwind"],
+    "backend": ["Node.js", "Python"],
+    "ml": ["TensorFlow", "scikit-learn"],
+    "tools": ["Docker", "GCP"]
+  },
+  "projects": [
+    {
+      "title": "Cloud Migration Platform",
+      "description": "Platform untuk migrasi infrastructure ke cloud dengan automated deployment dan monitoring real-time.",
+      "stack": ["Next.js", "Node.js", "GCP", "Docker"]
+    },
+    {
+      "title": "ML Recommendation Engine",
+      "description": "Sistem rekomendasi berbasis machine learning untuk personalisasi konten dengan TensorFlow dan scikit-learn.",
+      "stack": ["Python", "TensorFlow", "PostgreSQL", "FastAPI"]
+    },
+    {
+      "title": "DevOps Automation Tool",
+      "description": "Tool untuk otomasi deployment, CI/CD pipeline, dan infrastructure monitoring di berbagai cloud provider.",
+      "stack": ["Python", "Docker", "Kubernetes", "AWS"]
+    },
+    {
+      "title": "Real-time Analytics Dashboard",
+      "description": "Dashboard analytics real-time dengan visualisasi data komprehensif dan predictive insights.",
+      "stack": ["React", "Node.js", "MongoDB", "Chart.js"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Tech Innovators Inc",
+      "range": "Jan 2023 - Present",
+      "summary": "Memimpin pengembangan cloud infrastructure dan implementasi ML solutions untuk skala enterprise."
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Digital Solutions Ltd",
+      "range": "Jun 2021 - Dec 2022",
+      "summary": "Mengembangkan aplikasi web full-stack dengan React dan Node.js, melayani 100K+ pengguna aktif."
+    },
+    {
+      "title": "Junior Software Engineer",
+      "company": "StartUp Ventures",
+      "range": "Jan 2020 - May 2021",
+      "summary": "Berkontribusi pada pengembangan backend API dan database optimization untuk aplikasi mobile."
+    }
+  ]
+}
