@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-const pages = ['/', '/projects', '/certifications', '/contact']
+const pages = ['/', '/projects', '/certifications', '/contact', '/admin']
 
 for (const p of pages) {
   test(`page ${p} loads`, async ({ page, baseURL }) => {
@@ -20,4 +20,15 @@ test('contact page has mailto link', async ({ page, baseURL }) => {
   await page.goto(baseURL! + '/contact')
   const links = page.locator('a[href^="mailto:"]')
   await expect(links.first()).toBeVisible()
+})
+
+test('admin page shows update form', async ({ page, baseURL }) => {
+  await page.goto(baseURL! + '/admin')
+  await page.getByLabel('Password admin').fill('41dyl01ng')
+  await page.getByRole('button', { name: /Masuk ke admin/i }).click()
+  await expect(page.getByRole('heading', { name: /Profile/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Projects/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Experience timeline/i })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Certification grid/i })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Tambah update/i })).toBeVisible()
 })

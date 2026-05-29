@@ -3,24 +3,27 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function Hero() {
+type HeroProps = {
+  name: string
+  title: string
+  summary: string
+}
+
+export default function Hero({ name, title, summary }: HeroProps) {
   return (
     <section className="mt-0 -mx-6 px-6 py-12 md:py-24 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950">
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
       </div>
 
       <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Left content */}
         <motion.div
           className="flex-1 text-white"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Small badge */}
           <motion.div
             className="flex flex-wrap gap-3 mb-8"
             initial={{ y: 20, opacity: 0 }}
@@ -29,11 +32,10 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/6 text-slate-200 text-xs font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
-              Founder — Open to leadership & advisory roles
+              {title}
             </div>
           </motion.div>
 
-          {/* Main title */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -41,33 +43,30 @@ export default function Hero() {
           >
             <p className="text-slate-400 text-sm font-medium mb-2">Hello, I'm</p>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-              Aldy Oscar Pancasila Loing
+              {name}
             </h1>
           </motion.div>
 
-          {/* Subtitle */}
           <motion.p
             className="text-lg text-slate-300 mb-6 max-w-xl"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Building sustainable digital systems through AI, cloud, and circular technology.
+            {summary}
           </motion.p>
 
-          {/* Specialization box */}
           <motion.div
             className="p-4 rounded-lg glass-card mb-8 border border-white/6"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Core Capabilities</p>
-            <p className="text-slate-100 font-medium">AI systems • Cloud architecture • Product strategy • Sustainability engineering</p>
+            <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Core Focus</p>
+            <p className="text-slate-100 font-medium">AI applications • Sustainable systems • Web platforms • Community impact</p>
           </motion.div>
 
-          {/* CTA Button */}
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-wrap gap-4 items-center">
             <motion.a
               href="#projects"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-accent-cyan to-accent-emerald text-black font-semibold hover:scale-[1.02] transition-all"
@@ -88,10 +87,10 @@ export default function Hero() {
             >
               Let’s collaborate
             </motion.a>
+            <a href="/cv.pdf" className="text-sm text-slate-200 underline">Unduh CV</a>
           </div>
         </motion.div>
 
-        {/* Right side - Profile image */}
         <motion.div
           className="flex-1 relative w-full h-[480px] md:h-[700px] flex items-center justify-center pt-6 md:pt-12"
           initial={{ x: 50, opacity: 0 }}
@@ -99,9 +98,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <div className="relative w-full h-full rounded-2xl overflow-visible flex items-center justify-center max-h-[90vh]">
-            {/* Image container with glow effect */}
             <div className="relative w-full h-full overflow-visible flex items-center justify-center">
-              {/* subtle vignette to blend the image with background */}
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent to-slate-900/30"></div>
               <Image
                 src="/image/Aldy.png"

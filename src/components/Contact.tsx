@@ -1,10 +1,21 @@
 "use client"
 
 import { useState } from 'react'
-import site from '../../src/data/site.json'
 
-export default function Contact() {
-  const email = site.contact?.email || 'redacted@example.com'
+type ContactInfo = {
+  email: string
+  whatsapp: string
+  linkedin: string
+  github: string
+  location: string
+}
+
+type ContactProps = {
+  contact: ContactInfo
+}
+
+export default function Contact({ contact }: ContactProps) {
+  const email = contact?.email || 'redacted@example.com'
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle')
 
   async function handleSubmit(e: any) {
@@ -25,6 +36,10 @@ export default function Contact() {
     <section id="contact" className="mt-12">
       <h2 className="text-2xl font-semibold">Let’s build systems that create impact.</h2>
       <p className="text-slate-300 mt-2">Contact for advisory, collaboration, or opportunities.</p>
+
+      <div className="mt-3">
+        <div className="text-sm">Email: <a className="text-accent-cyan underline" href={`mailto:${email}`}>{email}</a></div>
+      </div>
 
       <div className="mt-6 max-w-xl">
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-3">

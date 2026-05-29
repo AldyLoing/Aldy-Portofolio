@@ -1,77 +1,216 @@
 {
   "name": "Aldy Oscar Pancasila Loing",
-  "title": "Cloud & ML Enthusiast — Software Engineer",
-  "summary": "Saya adalah seorang pengembang perangkat lunak dengan minat pada cloud, ML, dan infrastruktur. Informasi lengkap berasal dari CV.",
+  "title": "Information Systems Graduate — Software Engineer",
+  "summary": "Aldy is a Cum Laude Information Systems graduate with a strong background in developing digital solutions that combine technology, data, and real-world impact. He has experience building and deploying a wide range of applications, including web-based platforms, AI-powered systems, and community-focused digital tools, with a particular interest in transparency, sustainability, and user-centered design. His projects span personal AI applications, financial and administrative systems, and social innovation initiatives, reflecting both technical versatility and problem-solving ability. Recognized at the national level through innovation and community empowerment programs, and supported by intensive training in cloud computing and industry best practices, Aldy brings a multidisciplinary mindset, strong collaboration skills, and a commitment to creating meaningful, scalable, and responsible technology solutions.",
   "contact": {
-    "email": "redacted@example.com",
+    "email": "loingaldy@gmail.com",
+    "whatsapp": "+6282293494989",
+    "linkedin": "https://www.linkedin.com/in/aldyloing",
+    "github": "https://github.com/AldyLoing",
     "location": "Manado, Indonesia"
   },
   "skills": {
-    "frontend": ["React", "Next.js", "Tailwind"],
-    "backend": ["Node.js", "Python"],
-    "ml": ["TensorFlow", "scikit-learn"],
-    "tools": ["Docker", "GCP"]
+    "categories": [
+      {
+        "label": "Programming Languages",
+        "items": ["Python", "JavaScript", "TypeScript"]
+      },
+      {
+        "label": "Frameworks & Libraries",
+        "items": ["Django", "Django REST Framework", "Next.js", "Laravel", "Streamlit", "React"]
+      },
+      {
+        "label": "Database Management",
+        "items": ["Supabase", "MySQL", "SQLite", "PostgreSQL", "SQL"]
+      },
+      {
+        "label": "Web Development",
+        "items": ["HTML5", "CSS3", "Tailwind CSS", "Bootstrap 5", "RESTful API design"]
+      },
+      {
+        "label": "Cloud & DevOps",
+        "items": ["Google Cloud Platform", "Vercel", "Railway", "GitHub Actions"]
+      },
+      {
+        "label": "Mobile Development",
+        "items": ["Android Studio"]
+      },
+      {
+        "label": "Machine Learning & AI Tools",
+        "items": ["Hugging Face Transformers", "Sentence Transformers", "Scikit-learn", "PyTorch"]
+      },
+      {
+        "label": "UI/UX Design",
+        "items": ["Figma", "Canva"]
+      },
+      {
+        "label": "Version Control",
+        "items": ["Git", "GitHub"]
+      }
+    ]
   },
+  "education": [
+    {
+      "institution": "Universitas Sam Ratulangi",
+      "major": "Information Systems",
+      "period": "2021 - 2025",
+      "note": "GPA 3.93/4.00 — Cum Laude"
+    },
+    {
+      "institution": "SMA Kristen Eben Haezar Manado",
+      "major": "Natural Sciences",
+      "period": "2018 - 2021",
+      "note": "Senior high school foundation in science and technology"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Finalist — BRIN AIDeaNation (Jakarta)",
+      "year": "2025",
+      "summary": "Selected as one of the national finalists with the innovation project Eco Vending Machine (EVM) with Blockchain Integration, a digital solution designed to create a transparent and sustainable waste management system by leveraging blockchain technology for accountability and efficiency."
+    },
+    {
+      "title": "Cum Laude Graduate",
+      "year": "2025",
+      "summary": "Earned a Bachelor’s Degree in Information Systems with a GPA of 3.93/4.00, demonstrating consistent academic excellence combined with active participation in innovation-driven projects and leadership roles."
+    },
+    {
+      "title": "Finalist — Abdidaya Nasional (Bali)",
+      "year": "2024",
+      "summary": "Built a digital waste bank management system for a village-scale empowerment initiative. Features include user onboarding, waste input records, and dynamic bank unit dashboards."
+    },
+    {
+      "title": "Cloud Computing Cohort — Bangkit Academy",
+      "year": "Aug 2023 - Jan 2024",
+      "summary": "Selected as a participant in a prestigious national program organized by Google, GoTo, and Traveloka, completing ±900 hours of intensive training in cloud computing, DevOps, and industry best practices, and successfully delivering a capstone project integrating machine learning with cloud technology."
+    }
+  ],
   "projects": [
     {
-      "title": "Cloud Migration Platform",
-      "description": "Platform untuk migrasi infrastructure ke cloud dengan automated deployment dan monitoring real-time.",
-      "problem": "Complex on-prem infra with manual processes causing long deployments and drift.",
-      "solution": "Built an automated migration pipeline with IaC, blue/green deployments and observability.",
-      "impact": "Reduced deployment time from days to minutes and improved reliability.",
-      "role": "Lead Engineer",
-      "images": ["/images/projects/cloud-migration-1.png"],
-      "stack": ["Next.js", "Node.js", "GCP", "Docker"]
+      "title": "DayFrame — AI-Powered Personal Life Intelligence System",
+      "range": "Dec 2025",
+      "description": "Developed a privacy-first, AI-powered life intelligence platform that transforms continuous daily activity logs into structured insights and multi-timeframe analytics.",
+      "summary": "Built an append-only logging system, AI-generated daily summaries, and periodic reports (weekly, monthly, quarterly, yearly) with zero-hallucination conversational AI trained exclusively on user-owned data.",
+      "stack": ["Next.js", "Supabase", "pgvector", "RLS", "AI"],
+      "live": "https://day-frame-nu.vercel.app",
+      "github": "https://github.com/AldyLoing/DayFrame"
     },
     {
-      "title": "ML Recommendation Engine",
-      "description": "Sistem rekomendasi berbasis machine learning untuk personalisasi konten dengan TensorFlow dan scikit-learn.",
-      "problem": "Low engagement due to generic content suggestions.",
-      "solution": "Developed a hybrid collaborative-filtering and content-based recommender with online learning.",
-      "impact": "Increased click-through by 28% and session time by 22%.",
-      "role": "ML Engineer",
-      "images": ["/images/projects/ml-reco-1.png"],
-      "stack": ["Python", "TensorFlow", "PostgreSQL", "FastAPI"]
+      "title": "FinSight — Personal Finance Management System",
+      "range": "Nov 2025",
+      "description": "Modern full-stack personal finance management system with multi-currency tracking and analytics dashboards.",
+      "summary": "Implemented real-time exchange rates, comprehensive transaction management, budget planning with progress alerts, and rich financial analytics dashboards.",
+      "stack": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      "live": "https://fin-sight-nu.vercel.app",
+      "github": "https://github.com/AldyLoing/FinSight"
     },
     {
-      "title": "DevOps Automation Tool",
-      "description": "Tool untuk otomasi deployment, CI/CD pipeline, dan infrastructure monitoring di berbagai cloud provider.",
-      "problem": "Fragmented CI systems causing inconsistent releases across teams.",
-      "solution": "Built a unified CI platform with standardized pipelines, templates, and cost-aware autoscaling.",
-      "impact": "Cut release incidents by 40% and CI costs by 18%.",
-      "role": "Platform Engineer",
-      "images": ["/images/projects/devops-1.png"],
-      "stack": ["Python", "Docker", "Kubernetes", "AWS"]
+      "title": "KarAdmin — Office Administration Management System",
+      "range": "Nov 2025",
+      "description": "Modern office administration system with secure authentication, dashboards, document management, and archive modules.",
+      "summary": "Built fully featured modules including incoming/outgoing letters, employee data, finance tracking, and archives with RLS-based data security.",
+      "stack": ["Next.js 14", "TypeScript", "Tailwind CSS", "Supabase"],
+      "live": "https://kar-admin.vercel.app",
+      "github": "https://github.com/AldyLoing/KarAdmin"
     },
     {
-      "title": "Real-time Analytics Dashboard",
-      "description": "Dashboard analytics real-time dengan visualisasi data komprehensif dan predictive insights.",
-      "problem": "Decision-makers lacked near real-time visibility into product metrics.",
-      "solution": "Built streaming ETL pipeline and an interactive dashboard with alerting.",
-      "impact": "Enabled proactive interventions and improved SLAs for core features.",
-      "role": "Full Stack Engineer",
-      "images": ["/images/projects/analytics-1.png"],
-      "stack": ["React", "Node.js", "MongoDB", "Chart.js"]
+      "title": "Sentivize — AI-Powered Employee & CV Analysis App",
+      "range": "Nov 2025",
+      "description": "AI-driven web application to analyze employee data and CVs for HR analytics and recruitment support.",
+      "summary": "Implemented automated information extraction, sentiment and relevance scoring, semantic keyword matching, batch CV processing, and Excel export.",
+      "stack": ["Streamlit", "Python", "Hugging Face", "Transformers"],
+      "github": "https://github.com/AldyLoing/Sentivize"
+    },
+    {
+      "title": "Imanuel Website — Church Management Web App",
+      "range": "Nov 2025",
+      "description": "Modern church management web application with admin dashboards and CRUD modules for community management.",
+      "summary": "Implemented comprehensive modules for members, families, church groups, announcements, authentication, and real-time statistics.",
+      "stack": ["Next.js 15", "TypeScript", "Prisma", "Supabase"],
+      "live": "https://web-imanuel.vercel.app/",
+      "github": "https://github.com/AldyLoing/Web-Gereja"
+    },
+    {
+      "title": "Christmas Photobooth — Interactive Web App",
+      "range": "Oct 2025",
+      "description": "Christmas-themed photobooth with creative layouts, photo filters, and HD export.",
+      "summary": "Implemented real-time camera capture, 30+ Christmas filters, watermarking, snow effects, and responsive UI optimized for desktop and mobile.",
+      "stack": ["Next.js 15", "Tailwind CSS", "Framer Motion"],
+      "live": "https://santasnapbooth.com/",
+      "github": "https://github.com/AldyLoing/Christmas-Photobooth"
+    },
+    {
+      "title": "ORDERS Internal Dashboard — Full-stack Management Platform",
+      "range": "Oct 2025",
+      "description": "Internal management dashboard for projects, finances, member contributions, and automated profit-sharing.",
+      "summary": "Built with Django REST Framework and Next.js + Tailwind CSS, featuring analytics, secure authentication, and RESTful APIs.",
+      "stack": ["Django REST Framework", "Next.js", "Tailwind CSS"],
+      "github": "https://github.com/AldyLoing/ORDERS-Internal-Dashboard"
+    },
+    {
+      "title": "Tananyiurlestari.com — Sustainable Agriculture Website",
+      "range": "Dec 2024 - June 2025",
+      "description": "Comprehensive web-based waste bank management platform with gamification and multi-level roles.",
+      "summary": "Integrated real-time dashboards, Google Maps location mapping, and secure authentication to support sustainable waste management and community engagement.",
+      "stack": ["Web App", "Google Maps", "Real-time dashboards"],
+      "live": "https://tananyiurlestari.com/",
+      "github": "https://github.com/AldyLoing/TanaNyiurLestari"
+    },
+    {
+      "title": "Rumah Sampah Digital (RUSDI) — Community Empowerment App",
+      "range": "July 2024 - Sep 2024",
+      "description": "Digital waste bank management system for a village-scale empowerment initiative.",
+      "summary": "Implemented user onboarding, waste input records, and dynamic bank unit dashboards.",
+      "stack": ["Community App", "Dashboard", "Waste management"]
+    },
+    {
+      "title": "Kawanua - Kawan Untuk Alam — Nature Conservation Application",
+      "range": "Aug 2023 - Dec 2024",
+      "description": "Mobile app to identify plant and animal species using smartphone cameras.",
+      "summary": "Combines machine learning and cloud backend to deliver real-time conservation insights and species data.",
+      "stack": ["Mobile App", "Machine Learning", "Cloud backend"]
+    },
+    {
+      "title": "E-Commerce Android App",
+      "range": "Feb 2022 - May 2022",
+      "description": "Shopping platform with Firebase backend and realtime inventory.",
+      "summary": "Featured secure user login and data synchronization across devices.",
+      "stack": ["Android", "Firebase", "Realtime sync"]
     }
   ],
   "experience": [
     {
-      "title": "Senior Software Engineer",
-      "company": "Tech Innovators Inc",
-      "range": "Jan 2023 - Present",
-      "summary": "Memimpin pengembangan cloud infrastructure dan implementasi ML solutions untuk skala enterprise."
+      "title": "IT Support Intern",
+      "company": "North Sulawesi Police Department (Polda Sulut)",
+      "range": "Jan 2024 - Feb 2024",
+      "summary": "Assisted in maintaining internal systems, resolving network issues, and supporting end-user operations during the internship at the regional police IT division."
     },
     {
-      "title": "Full Stack Developer",
-      "company": "Digital Solutions Ltd",
-      "range": "Jun 2021 - Dec 2022",
-      "summary": "Mengembangkan aplikasi web full-stack dengan React dan Node.js, melayani 100K+ pengguna aktif."
+      "title": "Information Technology Staff",
+      "company": "Sintesa Peninsula Hotel Manado",
+      "range": "Dec 2025",
+      "summary": "Handled daily IT operations including system and network maintenance, troubleshooting hardware and software issues, supporting administrative applications, and assisting end users. This role was conducted as part of a government-supported internship program for fresh graduates organized by the Ministry of Manpower (Kemnaker), providing hands-on industry experience in a professional hospitality environment."
+    }
+  ],
+  "organizations": [
+    {
+      "role": "Leader",
+      "organization": "ORDERS",
+      "range": "June 2025 - Present",
+      "summary": "Led a digital initiative committed to building elegant, efficient, and sustainable technology solutions. Focused on transparent systems and environmentally conscious digital development to support social impact and innovation."
     },
     {
-      "title": "Junior Software Engineer",
-      "company": "StartUp Ventures",
-      "range": "Jan 2020 - May 2021",
-      "summary": "Berkontribusi pada pengembangan backend API dan database optimization untuk aplikasi mobile."
+      "role": "Chair",
+      "organization": "PPK Ormawa HIMSIFOR UNSRAT",
+      "range": "Jan 2024 - Nov 2024",
+      "summary": "Led a student team in executing the Rumah Sampah Digital program in Desa Kolongan, empowering the local community through workshops, app deployment, and sustainability training. The initiative advanced to the Abdidaya Nasional in Bali."
+    },
+    {
+      "role": "Member",
+      "organization": "HIMSIFOR UNSRAT (Department of Interests and Talents)",
+      "range": "Feb 2023 - Feb 2025",
+      "summary": "Actively participated in organizing tech-based and talent development programs, contributing to events such as coding workshops, design challenges, and student innovation showcases."
     }
   ]
 }
+

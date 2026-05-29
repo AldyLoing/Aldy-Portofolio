@@ -1,7 +1,14 @@
-import certs from '../../src/data/certificates.json'
-import Image from 'next/image'
+type CertificateItem = {
+  file: string
+  title: string
+  issuer: string
+}
 
-export default function Certifications() {
+type CertificationsProps = {
+  certs: CertificateItem[]
+}
+
+export default function Certifications({ certs }: CertificationsProps) {
   return (
     <section id="certifications" className="mt-12">
       <h2 className="text-2xl font-semibold">Certifications</h2>

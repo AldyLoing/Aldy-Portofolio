@@ -23,8 +23,10 @@ export default function Header() {
             <a href="#about" className="text-sm text-slate-300 hover:text-white">About</a>
             <a href="#projects" className="text-sm text-slate-300 hover:text-white">Selected Work</a>
             <a href="#experience" className="text-sm text-slate-300 hover:text-white">Experience</a>
+            <a href="#updates" className="text-sm text-slate-300 hover:text-white">Updates</a>
             <a href="#certifications" className="text-sm text-slate-300 hover:text-white">Certifications</a>
             <a href="#contact" className="text-sm text-slate-300 hover:text-white">Contact</a>
+            <a href="/admin" className="text-sm text-slate-300 hover:text-white">Admin</a>
             <a href="/cv.pdf" target="_blank" rel="noreferrer" className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent-cyan to-accent-emerald text-black font-medium">Resume</a>
           </div>
 

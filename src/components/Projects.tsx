@@ -1,32 +1,52 @@
-import projects from '../../src/data/site.json'
-import Image from 'next/image'
+type ProjectItem = {
+  title: string
+  range: string
+  description: string
+  summary: string
+  stack?: string[]
+  live?: string
+  github?: string
+}
 
-export default function Projects() {
-  const list = projects.projects || []
+type ProjectsProps = {
+  projects: ProjectItem[]
+}
+
+export default function Projects({ projects }: ProjectsProps) {
+  const list = projects || []
+
   return (
     <section id="projects" className="mt-12">
-      <h2 className="text-2xl font-semibold">Selected Work</h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <h2 className="text-2xl font-semibold">Project Experiences</h2>
+      <div className="mt-6 space-y-4">
         {list.length === 0 && <div className="text-slate-500">No projects yet.</div>}
         {list.map((p: any) => (
-          <article key={p.title} className="group relative overflow-hidden rounded-lg">
-            <div className="p-6 glass-card border border-white/6 h-full">
-              <div className="flex items-start gap-4">
-                <div className="flex-1">
-                  <h3 className="font-semibold text-lg text-white">{p.title}</h3>
-                  <div className="mt-2 text-sm text-slate-300">{p.description}</div>
-                  <p className="mt-3 text-slate-200 text-sm"><strong>Problem:</strong> {p.problem}</p>
-                  <p className="mt-2 text-slate-200 text-sm"><strong>Solution:</strong> {p.solution}</p>
-                  <p className="mt-2 text-accent-emerald font-medium">Impact: {p.impact}</p>
-                  <div className="mt-4 text-xs text-slate-400">Role: {p.role} • Stack: {p.stack?.join(', ')}</div>
+          <article key={p.title} className="p-5 rounded-lg glass-card border border-white/6">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="max-w-3xl">
+                <div className="text-sm text-accent-cyan font-medium">{p.range}</div>
+                <h3 className="mt-1 text-lg font-semibold text-white">{p.title}</h3>
+                <p className="mt-2 text-slate-300 text-sm">{p.description}</p>
+                <p className="mt-3 text-slate-200 text-sm">{p.summary}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.stack?.map((item: string) => (
+                    <span key={item} className="text-xs px-3 py-1 rounded-full bg-white/5 text-slate-200 border border-white/6">
+                      {item}
+                    </span>
+                  ))}
                 </div>
-                <div className="w-36 h-24 rounded overflow-hidden hidden md:block">
-                  {p.images && p.images[0] ? (
-                    <Image src={p.images[0]} alt={p.title} width={160} height={110} className="object-cover" />
-                  ) : (
-                    <div className="w-full h-full bg-white/5" />
-                  )}
-                </div>
+              </div>
+              <div className="flex flex-col gap-2 text-sm">
+                {p.live && (
+                  <a className="text-accent-cyan underline" href={p.live} target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                )}
+                {p.github && (
+                  <a className="text-slate-200 underline" href={p.github} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                )}
               </div>
             </div>
           </article>

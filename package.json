@@ -13,26 +13,27 @@
     "prepare": "npx playwright install --with-deps"
   },
   "dependencies": {
+    "@react-three/drei": "^9.59.3",
+    "@react-three/fiber": "^8.0.27",
+    "clsx": "^1.2.1",
+    "framer-motion": "^10.12.16",
+    "lottie-react": "^2.4.0",
     "next": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "framer-motion": "^10.12.16",
-    "@react-three/fiber": "^8.0.27",
-    "@react-three/drei": "^9.59.3",
-    "lottie-react": "^2.4.0",
-    "clsx": "^1.2.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "tailwindcss": "^3.4.13",
-    "postcss": "^8.4.23",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.21",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.48.0",
     "eslint-config-next": "^14.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "playwright": "^1.40.0",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.8",
-    "@types/react": "^18.2.21",
-    "@types/node": "^20.4.2",
-    "eslint-plugin-react": "^7.33.2"
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.2.2"
   }
 }

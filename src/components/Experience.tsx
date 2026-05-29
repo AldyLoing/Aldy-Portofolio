@@ -1,7 +1,16 @@
-import site from '../../src/data/site.json'
+type ExperienceItem = {
+  title: string
+  company: string
+  range: string
+  summary: string
+}
 
-export default function Experience() {
-  const exp = site.experience || []
+type ExperienceProps = {
+  experience: ExperienceItem[]
+}
+
+export default function Experience({ experience }: ExperienceProps) {
+  const exp = experience || []
   return (
     <section id="experience" className="mt-12">
       <h2 className="text-2xl font-semibold">Experience</h2>
@@ -9,7 +18,7 @@ export default function Experience() {
         {exp.length === 0 && <div className="text-slate-500">No experience listed yet.</div>}
         {exp.map((e: any, i: number) => (
           <div key={i} className="relative">
-            <div className="absolute -left-3 top-1 w-6 h-6 rounded-full bg-accent-cyan border-2 border-white/6" />
+            <div className="absolute -left-3 top-2 w-3 h-3 rounded-full bg-white/10 border border-white/6" />
             <div>
               <div className="flex items-baseline justify-between gap-4">
                 <div>
