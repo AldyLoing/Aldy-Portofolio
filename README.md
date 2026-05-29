@@ -4,14 +4,21 @@ This repository is an auto-scaffold for a professional portfolio website. It inc
 
 Quick commands (after placing files & installing):
 
-```powershell
+```bash
+export PATH="$HOME/.local/node/bin:$PATH"
 npm install
-npm run type-check
-npm run lint
-npm run build
-npm run start
+npm run dev
 ```
 
-See `fetch-and-test.ps1` for an automated sequence to download certificates from Google Drive and run the verification pipeline. Place your `Aldy.png` photo at `public/images/Aldy.png` and your CV as `public/cv.pdf` (the script can convert if available tools are installed).
+Place your `Aldy.png` at `public/image/Aldy.png` and `cv.pdf` at `public/cv.pdf`.
+
+Summary of recent redesign changes:
+- Global design tokens and premium fonts (`app/globals.css`, `tailwind.config.js`)
+- Sticky header and improved navigation (`src/components/Header.tsx`)
+- Founder-level Hero (`src/components/Hero.tsx`)
+- Capabilities (`src/components/Capabilities.tsx`) and Impact (`src/components/Impact.tsx`)
+- Projects upgraded to case-study cards and expanded `src/data/site.json`
+- Experience timeline, curated Certifications grid, Contact form + API
+- Placeholder project images in `public/images/projects/`
 
 Deployment: Vercel works out of the box — set root to the repo and use the `build` script.

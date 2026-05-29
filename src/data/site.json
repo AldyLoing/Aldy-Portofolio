@@ -16,21 +16,41 @@
     {
       "title": "Cloud Migration Platform",
       "description": "Platform untuk migrasi infrastructure ke cloud dengan automated deployment dan monitoring real-time.",
+      "problem": "Complex on-prem infra with manual processes causing long deployments and drift.",
+      "solution": "Built an automated migration pipeline with IaC, blue/green deployments and observability.",
+      "impact": "Reduced deployment time from days to minutes and improved reliability.",
+      "role": "Lead Engineer",
+      "images": ["/images/projects/cloud-migration-1.png"],
       "stack": ["Next.js", "Node.js", "GCP", "Docker"]
     },
     {
       "title": "ML Recommendation Engine",
       "description": "Sistem rekomendasi berbasis machine learning untuk personalisasi konten dengan TensorFlow dan scikit-learn.",
+      "problem": "Low engagement due to generic content suggestions.",
+      "solution": "Developed a hybrid collaborative-filtering and content-based recommender with online learning.",
+      "impact": "Increased click-through by 28% and session time by 22%.",
+      "role": "ML Engineer",
+      "images": ["/images/projects/ml-reco-1.png"],
       "stack": ["Python", "TensorFlow", "PostgreSQL", "FastAPI"]
     },
     {
       "title": "DevOps Automation Tool",
       "description": "Tool untuk otomasi deployment, CI/CD pipeline, dan infrastructure monitoring di berbagai cloud provider.",
+      "problem": "Fragmented CI systems causing inconsistent releases across teams.",
+      "solution": "Built a unified CI platform with standardized pipelines, templates, and cost-aware autoscaling.",
+      "impact": "Cut release incidents by 40% and CI costs by 18%.",
+      "role": "Platform Engineer",
+      "images": ["/images/projects/devops-1.png"],
       "stack": ["Python", "Docker", "Kubernetes", "AWS"]
     },
     {
       "title": "Real-time Analytics Dashboard",
       "description": "Dashboard analytics real-time dengan visualisasi data komprehensif dan predictive insights.",
+      "problem": "Decision-makers lacked near real-time visibility into product metrics.",
+      "solution": "Built streaming ETL pipeline and an interactive dashboard with alerting.",
+      "impact": "Enabled proactive interventions and improved SLAs for core features.",
+      "role": "Full Stack Engineer",
+      "images": ["/images/projects/analytics-1.png"],
       "stack": ["React", "Node.js", "MongoDB", "Chart.js"]
     }
   ],

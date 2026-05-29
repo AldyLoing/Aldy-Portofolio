@@ -6,11 +6,15 @@ import Certifications from '../src/components/Certifications'
 import Skills from '../src/components/Skills'
 import Experience from '../src/components/Experience'
 import Contact from '../src/components/Contact'
+import Capabilities from '../src/components/Capabilities'
+import Impact from '../src/components/Impact'
 
 export default function Home() {
   return (
     <main className="container mx-auto p-6">
       <Hero />
+      <Capabilities />
+      <Impact />
       <About />
       <Skills />
       <Projects />

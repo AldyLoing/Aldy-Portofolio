@@ -10,10 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
-      <body className="bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50">
+      <body>
+        <a href="#main" className="skip-link sr-only focus:not-sr-only">Skip to content</a>
         <div className="container mx-auto p-6">
           <Header />
-          {children}
+          <main id="main">{children}</main>
         </div>
       </body>
     </html>
