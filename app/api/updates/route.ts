@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto'
-import { readFile, writeFile } from 'fs/promises'
 import { NextRequest, NextResponse } from 'next/server'
 import path from 'path'
+import { readJsonResource, writeJsonResource } from '../../../src/lib/storage'
 
 type UpdateItem = {
   id: string
@@ -17,16 +17,14 @@ const updatesFile = path.join(process.cwd(), 'src/data/updates.json')
 
 async function readUpdates(): Promise<UpdateItem[]> {
   try {
-    const raw = await readFile(updatesFile, 'utf8')
-    const parsed = JSON.parse(raw)
-    return Array.isArray(parsed) ? parsed : []
+    return await readJsonResource<UpdateItem[]>('src/data/updates.json', updatesFile)
   } catch {
     return []
   }
 }
 
 async function writeUpdates(updates: UpdateItem[]) {
-  await writeFile(updatesFile, JSON.stringify(updates, null, 2) + '\n', 'utf8')
+  await writeJsonResource('src/data/updates.json', updatesFile, updates)
 }
 
 function isAuthenticated(request: NextRequest) {

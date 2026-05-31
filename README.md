@@ -21,4 +21,10 @@ Summary of recent redesign changes:
 - Experience timeline, curated Certifications grid, Contact form + API
 - Placeholder project images in `public/images/projects/`
 
-Deployment: Vercel works out of the box — set root to the repo and use the `build` script.
+Deployment: Vercel works out of the box. Set these environment variables for editable content persistence:
+
+- `GITHUB_REPO=AldyLoing/Aldy-Portofolio`
+- `GITHUB_BRANCH=main`
+- `GITHUB_TOKEN=<GitHub token with contents write access>`
+
+Without those variables, the admin editor still works locally by writing to the workspace files.

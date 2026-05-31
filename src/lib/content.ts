@@ -1,7 +1,7 @@
 import 'server-only'
 
-import { readFile, writeFile } from 'fs/promises'
 import path from 'path'
+import { readJsonResource, writeJsonResource } from './storage'
 
 export type CertificateItem = {
   file: string
@@ -64,19 +64,17 @@ const siteFile = path.join(process.cwd(), 'src/data/site.json')
 const certificatesFile = path.join(process.cwd(), 'src/data/certificates.json')
 
 export async function readSiteContent(): Promise<SiteContent> {
-  const raw = await readFile(siteFile, 'utf8')
-  return JSON.parse(raw) as SiteContent
+  return readJsonResource<SiteContent>('src/data/site.json', siteFile)
 }
 
 export async function writeSiteContent(content: SiteContent) {
-  await writeFile(siteFile, JSON.stringify(content, null, 2) + '\n', 'utf8')
+  await writeJsonResource('src/data/site.json', siteFile, content)
 }
 
 export async function readCertificates(): Promise<CertificateItem[]> {
-  const raw = await readFile(certificatesFile, 'utf8')
-  return JSON.parse(raw) as CertificateItem[]
+  return readJsonResource<CertificateItem[]>('src/data/certificates.json', certificatesFile)
 }
 
 export async function writeCertificates(certificates: CertificateItem[]) {
-  await writeFile(certificatesFile, JSON.stringify(certificates, null, 2) + '\n', 'utf8')
+  await writeJsonResource('src/data/certificates.json', certificatesFile, certificates)
 }
