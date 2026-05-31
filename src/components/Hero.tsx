@@ -41,7 +41,7 @@ export default function Hero({ name, title, summary }: HeroProps) {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <p className="text-slate-400 text-sm font-medium mb-2">Hello, I'm</p>
+            <p className="text-slate-400 text-sm font-medium mb-2">Hello, I am</p>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
               {name}
             </h1>

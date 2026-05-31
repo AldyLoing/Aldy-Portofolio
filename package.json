@@ -9,8 +9,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "test:e2e": "playwright test",
-    "format": "prettier --write .",
-    "prepare": "npx playwright install --with-deps"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@react-three/drei": "^9.59.3",

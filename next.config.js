@@ -2,10 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
-  },
-  experimental: {
-    appDir: true
+    domains: []
   }
 }
 
