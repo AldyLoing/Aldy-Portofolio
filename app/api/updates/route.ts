@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import path from 'path'
 import { readJsonResource, writeJsonResource } from '../../../src/lib/storage'
 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '41dyl01ng'
+
 type UpdateItem = {
   id: string
   title: string
@@ -28,7 +30,12 @@ async function writeUpdates(updates: UpdateItem[]) {
 }
 
 function isAuthenticated(request: NextRequest) {
-  return request.cookies.get('admin_session')?.value === 'unlocked'
+  if (request.cookies.get('admin_session')?.value === 'unlocked') {
+    return true
+  }
+
+  const headerPassword = request.headers.get('x-admin-password') || ''
+  return headerPassword === ADMIN_PASSWORD
 }
 
 export async function GET() {

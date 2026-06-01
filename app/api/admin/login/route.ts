@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const ADMIN_PASSWORD = '41dyl01ng'
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '41dyl01ng'
 
 export async function POST(request: Request) {
   const body = await request.json()
@@ -14,6 +14,7 @@ export async function POST(request: Request) {
   response.cookies.set('admin_session', 'unlocked', {
     httpOnly: true,
     sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
     path: '/',
     maxAge: 60 * 60 * 8
   })

@@ -71,8 +71,17 @@ export default function AdminPage() {
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
   const [password, setPassword] = useState('')
+  const [adminPass, setAdminPass] = useState('')
   const [authenticated, setAuthenticated] = useState(false)
   const [checkingSession, setCheckingSession] = useState(true)
+
+  function authHeaders(): Record<string, string> {
+    if (!adminPass) {
+      return {}
+    }
+
+    return { 'x-admin-password': adminPass }
+  }
 
   async function loadUpdates() {
     const response = await fetch('/api/updates', { cache: 'no-store' })
@@ -123,6 +132,7 @@ export default function AdminPage() {
       }
 
       setAuthenticated(true)
+  setAdminPass(password)
       setPassword('')
       await loadContent()
       await loadUpdates()
@@ -135,6 +145,7 @@ export default function AdminPage() {
   async function handleLogout() {
     await fetch('/api/admin/logout', { method: 'POST' })
     setAuthenticated(false)
+    setAdminPass('')
     setSite(emptySite)
     setCertificates([])
     setUpdates([])
@@ -208,12 +219,16 @@ export default function AdminPage() {
     try {
       const response = await fetch('/api/content', {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
         body: JSON.stringify({ site, certificates })
       })
 
       if (!response.ok) {
         const error = await response.json()
+        if (response.status === 401) {
+          setAuthenticated(false)
+          throw new Error('Sesi admin tidak valid. Silakan login ulang.')
+        }
         throw new Error(error.error || 'Failed to save content')
       }
 
@@ -233,12 +248,16 @@ export default function AdminPage() {
     try {
       const response = await fetch('/api/updates', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
         body: JSON.stringify(form)
       })
 
       if (!response.ok) {
         const error = await response.json()
+        if (response.status === 401) {
+          setAuthenticated(false)
+          throw new Error('Sesi admin tidak valid. Silakan login ulang.')
+        }
         throw new Error(error.error || 'Failed to save update')
       }
 
@@ -253,8 +272,16 @@ export default function AdminPage() {
   }
 
   async function handleDelete(id: string) {
-    const response = await fetch(`/api/updates?id=${id}`, { method: 'DELETE' })
+    const response = await fetch(`/api/updates?id=${id}`, {
+      method: 'DELETE',
+      headers: authHeaders()
+    })
     if (!response.ok) {
+      if (response.status === 401) {
+        setAuthenticated(false)
+        setMessage('Sesi admin tidak valid. Silakan login ulang.')
+        return
+      }
       setMessage('Gagal menghapus update.')
       return
     }
